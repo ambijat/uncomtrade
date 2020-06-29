@@ -1,4 +1,3 @@
-setwd("/media/ambijat/WACHA/R5/comtrade2/st_class")
 library(rjson)
 
 project_directory <- getwd()
