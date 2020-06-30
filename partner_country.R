@@ -33,4 +33,5 @@ pp2 <- pp1 %>%
   filter(share > 0) %>%
   select(country.code, country.name)
 
+#this gives the list of those countries whose GNI was atleast above 0. So that only meaningful entities are listed for datadownloading.
 write.csv(pp2, "partner_list.csv", row.names = F)
