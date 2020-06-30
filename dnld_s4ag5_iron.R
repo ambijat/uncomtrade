@@ -164,5 +164,7 @@ for (j in codo1){
 
 
 #################################
+# files downloaded wold be nice arrangement of raw data.
+# these need to be further dressed and transposed into correct usable format via next files.
 #################################
 #################################
