@@ -1,5 +1,3 @@
-setwd("D:/R5b/comtrade4/cmtr_dnld")
-
 # this code is for downloading S4 at AG5 level of export data.
 # ag5 specific code for some commodities.
 basdir <- "D:/R5b/comtrade4"
