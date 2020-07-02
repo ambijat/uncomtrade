@@ -93,6 +93,9 @@ head(wdi2)
     ## 5                                    South Asia   2.058046e+12   SAS
     ## 6                                       Andorra             NA   AND
 
-So, there are 3 columns for our need, 1. country, 2. NY.GNP.MKTP.CD, 3.
-iso3c. The last one is the country code that is necessary for joining
+So, there are 3 columns for our need, 
+1. country, 
+2. NY.GNP.MKTP.CD, 
+3. iso3c. 
+The last one is the country code that is necessary for joining
 the dataframe with our partners list we have.
