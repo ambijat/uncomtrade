@@ -1,4 +1,4 @@
-Partner List
+Creating a Partner List
 ------------
 
 The partners of trade are the variables in column each country that has
