@@ -25,4 +25,12 @@ The scripts coded here in R programming language are aimed at harmonsing the nee
     + S2 - Revision 2
     + S3 - Revision 3
     + S4 - Revision 4
-
+## Levels of Classification
+* TOTAL
+* Levels
+  + AG1 - 01 digits code
+  + AG2 - 02 digits code
+  + AG3 - 03 digits code
+  + AG4 - 04 digits code
+  + AG5 - 05 digits code
+  + AG6 - 06 digits code
