@@ -2,7 +2,9 @@
 title: "Setting the Partner Countries List with Substantial GNI Figures."
 author: "ambijat"
 date: "02/07/2020"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 ## Partner List
