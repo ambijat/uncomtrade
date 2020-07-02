@@ -97,8 +97,9 @@ So, there are 3 columns for our need, 1. country, 2. NY.GNP.MKTP.CD, 3.
 iso3c.
 
 The last one is the country code that is necessary for joining the
-dataframe with our partners list we have. Loading country\_list from
-excel file downloaded from
+dataframe with our partners list we have.
+
+Loading country\_list from excel file downloaded from
 <a href="https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name" class="uri">https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name</a>
 
 ``` r
@@ -106,7 +107,7 @@ library(readxl)
 country_list <- read_excel("comtradecountry_nowlist.xlsx")
 ```
 
-renaming the columns
+renaming the columns of the dataframe
 
 ``` r
 colnames(country_list) <- c("country.code", "country.name", "iso3c")

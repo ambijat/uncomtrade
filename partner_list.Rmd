@@ -41,12 +41,14 @@ So, there are 3 columns for our need,
 3. iso3c. 
 
 The last one is the country code that is necessary for joining the dataframe with our partners list we have.
+
 Loading country_list from excel file downloaded from https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name
+
 ```{r, include=TRUE}
 library(readxl)
 country_list <- read_excel("comtradecountry_nowlist.xlsx")
 ```
-renaming the columns
+renaming the columns of the dataframe
 ```{r, include=TRUE}
 colnames(country_list) <- c("country.code", "country.name", "iso3c")
 head(country_list)
