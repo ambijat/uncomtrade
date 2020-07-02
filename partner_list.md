@@ -184,7 +184,7 @@ nrow(pp2)
     ## [1] 156
 
 The list of countries whose GNI is of some significance are 156 in
-total. So, for the panel data the list of 156 countries would be used
+total. So, for the panel data a list of 156 countries would be used
 for creating a block of matrix against the selected commodities. It
 would allow us only meaningful entities for datadownloading.
 
