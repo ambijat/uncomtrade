@@ -34,3 +34,7 @@ The scripts coded here in R programming language are aimed at harmonsing the nee
   + AG4 - 04 digits code
   + AG5 - 05 digits code
   + AG6 - 06 digits code
+## Data formats and the Constraints
+The data are downloaded in the JSON or CSV format. It is important to understand the nature of data dissemination that makes the use of UN Comtrade data a little tricky. The UN Comtrade data is non-regular in the sense, if the commodity for which there is no data or null data are omitted from data rows. Similarly, the countries for which there is no data or null data are omitted from columns. Hence for different years the same matrix of rows and columns are not fetched due to variability of trade data. Therefore, it is needed to have a uniform matrix across the batch of 10 years in order to conduct a meaningful enquiry.
+## Task Performed
+The code steps provided here are aimed to create a uniform panel of data in order to create a uniform matrix of data. An example is stored here in the form of raw data stored for India in folder. And, the subsequent processed data stored in the processed folder to see the difference.
