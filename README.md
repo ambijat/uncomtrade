@@ -9,18 +9,18 @@ The scripts coded here in R programming language are aimed at harmonsing the nee
 * Trade Type
   + Export
   + Import
- * Annual or Monthly
- * Trade Type
+* Annual or Monthly
+* Trade Type
   + Commodity
   + Services
  ## Classification
-  + HS - Harmonized System
+* HS - Harmonized System
     + H0 - 1992
     + H1 - 1996
     + H2 - 2002
     + H3 - 2007
     + H4 - 2012
-  + ST - Standard International Trade Classification (SITC)
+* ST - Standard International Trade Classification (SITC)
     + S1 - Revision 1
     + S2 - Revision 2
     + S3 - Revision 3
