@@ -40,4 +40,5 @@ The data are downloaded in the JSON or CSV format. It is important to understand
 The code steps provided here are aimed to create a uniform panel of data in order to create a uniform matrix of data. An example is stored here in the form of raw data stored for India in folder. And, the subsequent processed data stored in the processed folder to see the difference.
 
 # STEPS
-[Partner_list]()
+[Partner_list](https://github.com/ambijat/uncomtrade/blob/master/partner_country.R)
+The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country.
