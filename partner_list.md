@@ -97,5 +97,6 @@ So, there are 3 columns for our need,
 1. country, 
 2. NY.GNP.MKTP.CD, 
 3. iso3c. 
+
 The last one is the country code that is necessary for joining
 the dataframe with our partners list we have.
