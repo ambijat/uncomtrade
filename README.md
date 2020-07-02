@@ -5,7 +5,6 @@ The data by UN Comtrade is supplied via API page available at [UNComtrade Portal
 Similarly, not more than 5 reporter areas can be queried in a single request. And, also if partner areas is other than 'ALL', then also the request is limited to 5 queries. Any, violation of the usage limits usually blocks the ip address for 1 hour and only after we can re-start data query.
 ## Objective of these scripts
 The scripts coded here in R programming language are aimed at harmonsing the needs for downloading large volume of data with proper utlisation of the options within given constraints without having to bother much about these. The purpose is to work on various structure of data that are made avaialable by the UN Comtrade data in various formats. A short description here would be fruitful.
-
 ## Typology of UN Comtrade Data
 * Trade Type
   + Export
