@@ -9,8 +9,12 @@ The scripts coded here in R programming language are aimed at harmonsing the nee
 * Trade Type
   + Export
   + Import
- * Classification
-  + HS - Harmonzed System
+ * Annual or Monthly
+ * Trade Type
+  + Commodity
+  + Services
+ ## Classification
+  + HS - Harmonized System
     + H0 - 1992
     + H1 - 1996
     + H2 - 2002
