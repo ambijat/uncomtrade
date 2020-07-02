@@ -1,5 +1,5 @@
 Creating a Partner List
-------------
+-----------------------
 
 The partners of trade are the variables in column each country that has
 entered into trade with the reporting country. There almost 200
@@ -93,10 +93,32 @@ head(wdi2)
     ## 5                                    South Asia   2.058046e+12   SAS
     ## 6                                       Andorra             NA   AND
 
-So, there are 3 columns for our need, 
-1. country, 
-2. NY.GNP.MKTP.CD, 
-3. iso3c. 
+So, there are 3 columns for our need, 1. country, 2. NY.GNP.MKTP.CD, 3.
+iso3c.
 
-The last one is the country code that is necessary for joining
-the dataframe with our partners list we have.
+The last one is the country code that is necessary for joining the
+dataframe with our partners list we have. Loading country\_list from
+excel file downloaded from
+<a href="https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name" class="uri">https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name</a>
+
+``` r
+library(readxl)
+country_list <- read_excel("comtradecountry_nowlist.xlsx")
+```
+
+renaming the columns
+
+``` r
+colnames(country_list) <- c("country.code", "country.name", "iso3c")
+head(country_list)
+```
+
+    ## # A tibble: 6 x 3
+    ##   country.code country.name   iso3c
+    ##          <dbl> <chr>          <chr>
+    ## 1            4 Afghanistan    AFG  
+    ## 2            8 Albania        ALB  
+    ## 3           12 Algeria        DZA  
+    ## 4           16 American Samoa ASM  
+    ## 5           20 Andorra        AND  
+    ## 6           24 Angola         AGO
