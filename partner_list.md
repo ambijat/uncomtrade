@@ -99,7 +99,9 @@ iso3c.
 The last one is the country code that is necessary for joining the
 dataframe with our partners list we have.
 
-Loading country\_list from excel file downloaded from
+Loading country\_list from excel file downloaded from the UN Comtrade
+database.
+
 <a href="https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name" class="uri">https://unstats.un.org/unsd/tradekb/Knowledgebase/50377/Comtrade-Country-Code-and-Name</a>
 
 ``` r
@@ -123,3 +125,72 @@ head(country_list)
     ## 4           16 American Samoa ASM  
     ## 5           20 Andorra        AND  
     ## 6           24 Angola         AGO
+
+The WDI data is joined with the country\_list so as to match the GNI for
+UN Comtrade list countries.
+
+``` r
+pp <- left_join(country_list, wdi2, by = "iso3c")
+colnames(pp)[5] <- "GNI"
+names(pp)
+```
+
+    ## [1] "country.code" "country.name" "iso3c"        "country"      "GNI"
+
+After joining the datasets the share of each country’s GNI against the
+world GNI is calculated. A new column share is created for enlisting the
+ratios of each country’s GNI.
+
+``` r
+pp$share <- round((pp$GNI/6.594123e+13)*100, 2)
+head(pp)
+```
+
+    ## # A tibble: 6 x 6
+    ##   country.code country.name   iso3c country                  GNI share
+    ##          <dbl> <chr>          <chr> <chr>                  <dbl> <dbl>
+    ## 1            4 Afghanistan    AFG   Afghanistan     15884505938.  0.02
+    ## 2            8 Albania        ALB   Albania         11807221086.  0.02
+    ## 3           12 Algeria        DZA   Algeria        160820354235.  0.24
+    ## 4           16 American Samoa ASM   American Samoa           NA  NA   
+    ## 5           20 Andorra        AND   Andorra                  NA  NA   
+    ## 6           24 Angola         AGO   Angola          75712633817.  0.11
+
+removing NA rows by using complete.cases
+
+``` r
+pp1 <- na.omit(pp)
+nrow(pp)
+```
+
+    ## [1] 248
+
+``` r
+nrow(pp1)
+```
+
+    ## [1] 191
+
+As you can see the complete cases are only 191 out of total cases of
+248. Now filtering only those countries whose GNI share is above 0.
+
+``` r
+pp2 <- pp1 %>%
+  filter(share > 0) %>%
+  select(country.code, country.name)
+nrow(pp2)
+```
+
+    ## [1] 156
+
+The list of countries whose GNI is of some significance are 156 in
+total. So, for the panel data the list of 156 countries would be used
+for creating a block of matrix against the selected commodities. It
+would allow us only meaningful entities for datadownloading.
+
+``` r
+write.csv(pp2, "partner_list.csv", row.names = F)
+```
+
+Above command shall export the list of 156 country.name and their
+country.code in a comma separated file (csv).
