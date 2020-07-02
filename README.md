@@ -6,5 +6,5 @@ Similarly, not more than 5 reporter areas can be queried in a single request. An
 ## Objective of these scripts
 The scripts coded here in R programming language are aimed at harmonsing the needs for downloading large volume of data with proper utlisation of the options within given constraints without having to bother much about these. The purpose is to work on various structure of data that are made avaialable by the UN Comtrade data in various formats. A short description here would be fruitful.
 ## Typology of UN Comtrade Data
-
+. Type
 
