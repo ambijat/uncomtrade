@@ -49,7 +49,7 @@ head(df4)
 ```
 ## Joining Partner COuntries with S4AG5 Commodity level.
 First initializing the libraries.
-```{r, echo=FALSE, include=TRUE}
+```{r, eval=FALSE, include=TRUE}
 library(dplyr)
 library(tidyverse)
 ```
