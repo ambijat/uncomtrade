@@ -50,4 +50,5 @@ The code steps provided here are aimed to create a uniform panel of data in orde
 The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country. The final list of [partner countries](https://github.com/ambijat/uncomtrade/blob/master/partner_list.csv) can be seen here.
 
 [Classification-Level Matrix]()
+
 We will take S4 classification with aggregate level 4 for the current project. There are several other popular choices such as S4AG2, HS2AG2, HS4AG4, HS4AG6 which define various levels of detailing the commodity classification. The lower the AG level lesser are the number of the rows and similarly higher the AG level higher the number of rows of commodity class. The AG4 level has more than 5000 commodities.
