@@ -47,6 +47,6 @@ The code steps provided here are aimed to create a uniform panel of data in orde
 # STEPS
 [Partner_list](https://github.com/ambijat/uncomtrade/blob/master/partner_list.md)
 
-The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country.
+The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country. The final list of[partner countries](https://github.com/ambijat/uncomtrade/blob/master/partner_list.csv) can be seen here.
 
 [Classification-Level Matrix]()
