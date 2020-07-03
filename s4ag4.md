@@ -80,7 +80,7 @@ head(df4)
     ## 5          00122                           00122 - Goats, live
     ## 6          00131            00131 - Pure-bred breeding animals
 
-Joining Partner COuntries with S4AG5 Commodity level.
+Joining Partner Countries with S4AG5 Commodity level.
 -----------------------------------------------------
 
 First initializing the libraries.
