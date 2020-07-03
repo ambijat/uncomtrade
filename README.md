@@ -47,6 +47,10 @@ The code steps provided here are aimed to create a uniform panel of data in orde
 # STEPS
 [Partner_list](https://github.com/ambijat/uncomtrade/blob/master/partner_list.md)
 
-The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country.
+The first step is to create a domain of partner countries. Partner countries are the ones who report their export or import with country in question or the reporter country. The final list of [partner countries](https://github.com/ambijat/uncomtrade/blob/master/partner_list.csv) can be seen here.
 
 [Classification-Level Matrix]()
+
+We will take S4 classification with aggregate level 5 for the current project. There are several other popular choices such as S4AG2, HS2AG2, HS4AG4, HS4AG6 which define various levels of detailing the commodity classification. The lower the AG level lesser are the number of the rows and similarly higher the AG level higher the number of rows of commodity class. The AG4 level has almost 3000 commodities.
+
+The S4 of the SITC, Revision 4 was launched in 2006 for International Merchandise Trade Statistics. It has 9 major sections with long array of divisions followed by the sub-groups under each section. For example, Section-0 pertains to Food and live animals, which has meat, dairy, vegetables and fruits etc as broad categories. Te vegetable and fruit section has further 5 divisions and 27 subgroups which expand to 92 basic headings.
