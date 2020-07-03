@@ -49,7 +49,7 @@ head(df4)
 ```
 ## Joining Partner COuntries with S4AG5 Commodity level.
 First initializing the libraries.
-```{r, eval=FALSE, include=TRUE}
+```{r, message=FALSE, include=TRUE}
 library(dplyr)
 library(tidyverse)
 ```
@@ -58,7 +58,7 @@ Next, we import the partner countries from partner_list.
 pd <- read.csv("partner_list.csv", stringsAsFactors = F)
 colnames(pd) <- c("Partner.Code", "Partner.name")
 ```
-# combining partner list and s4
+# combining partner list and commodity list
 ```{r, include=TRUE}
 sa <- merge(df4, pd)
 colnames(sa) <- c("Commodity.code", "Commodity.name", "Partner.Code", "Partner.name")
@@ -67,3 +67,18 @@ nrow(sa)
 ## Selecting a group of Commodities
 If we look into the total rows of dataframe, then the number is quite large 4,13,868 (which is 2653*156). This is usually problematic for the UN Comtrade data limitation for a guest user is 1,00,000 queries. Therefore, it is advisable to work for desired group of commodities. 
 
+Therefore, we will use iron as the catchword for filtering the commodities that mention iron anywhere in their commodity titles. 
+```{r, include=TRUE}
+iron <- df4 %>%
+  filter(grepl("[I|i]ron", Commodity.name))
+head(iron)
+```
+# combining partner list with commodity list.
+```{r, include=TRUE}
+sa_2 <- merge(iron, pd)
+colnames(sa_2) <- c("Commodity.Code", "Commodity.name", "Partner.Code", "Partner.name")
+```
+# Using this file for iron data.
+```{r, eval=FALSE, include=TRUE}
+write.csv(sa_2, "s4ag5_iron.csv", row.names = F)
+```
