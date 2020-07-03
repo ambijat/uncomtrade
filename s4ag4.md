@@ -156,3 +156,6 @@ Using this file for iron data.
 ``` r
 write.csv(sa_2, "s4ag5_iron.csv", row.names = F)
 ```
+
+The CSV file is exported which shall be used for downloading uncomtrade
+data.
