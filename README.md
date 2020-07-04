@@ -55,7 +55,7 @@ We will take S4 classification with aggregate level 5 for the current project. T
 
 The S4 of the SITC, Revision 4 was launched in 2006 for International Merchandise Trade Statistics. It has 9 major sections with long array of divisions followed by the sub-groups under each section. For example, Section-0 pertains to Food and live animals, which has meat, dairy, vegetables and fruits etc as broad categories. Te vegetable and fruit section has further 5 divisions and 27 subgroups which expand to 92 basic headings.
 
-[Commodity Download]()
+[Commodity Download](https://github.com/ambijat/uncomtrade/blob/master/dnld_s4ag5.md)
 
 The panel format developed in above step is used to download data from the UN Comtrade API. The online provision of download can be accessed at [UNComtrade API](https://comtrade.un.org/api/swagger/ui/index#!/Data/Data_GetData) webpage. Since this demonstration is limited to only specific commodities pertaining to the query for iron products only. There are around 54 commodities at S4AG5 level that contain the word iron. We shall see how it is download. 
 
