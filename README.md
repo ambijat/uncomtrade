@@ -55,4 +55,4 @@ We will take S4 classification with aggregate level 5 for the current project. T
 
 The S4 of the SITC, Revision 4 was launched in 2006 for International Merchandise Trade Statistics. It has 9 major sections with long array of divisions followed by the sub-groups under each section. For example, Section-0 pertains to Food and live animals, which has meat, dairy, vegetables and fruits etc as broad categories. Te vegetable and fruit section has further 5 divisions and 27 subgroups which expand to 92 basic headings.
 
-[Commidty Download]()
+[Commodity Download]()
