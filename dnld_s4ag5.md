@@ -102,13 +102,36 @@ modified according to the needs of the code we intend to write. Those
 whoe are interested more on this can find further details on the
 [webpage](https://comtrade.un.org/data/Doc/api/ex/r) here.
 
+I you go through the parameters required for the function then their
+explanation is as follows.
+
+-   url - it is the link to the API.
+-   type - here “C” is for commodities
+-   freq - here “A” is for annual
+-   px - for classification type, we are using “S4” here.
+-   ps - time period. This has a limitation of 5 years but we will use
+    10 year range and by pass the limitation in the subsequent code
+    below.
+-   r - the reporter country, whose data we want to download. This case
+    we are using only India, however we can use a range of maximum 5
+    countrie as per UN Comtrade limitation. But this limitation can also
+    be by passed in our code below.
+-   p - the partner countries, who are trading with reporter countries.
+    We have already created the panel of 156 countries in our
+    partner\_list code.
+-   rg - direction of the trade, “1” for import and “2” is for export
+-   cc - this is the aggregate level at which the data is to be
+    collected. We are taking here AG5.
+-   fmt - file format for download. csv or json. We will be downloading
+    in csv format.
+
 ``` r
 get.Comtrade <- function(url="http://comtrade.un.org/api/get?"
                          ,maxrec=100000
                          ,type="C"
                          ,freq="A"
                          ,px="S4"
-                         ,ps="2016"
+                         ,ps
                          ,r
                          ,p
                          ,rg
