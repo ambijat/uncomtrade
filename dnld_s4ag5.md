@@ -180,3 +180,90 @@ get.Comtrade <- function(url="http://comtrade.un.org/api/get?"
   }
 }
 ```
+
+Creating the Country folder for storage
+---------------------------------------
+
+``` r
+year <- as.character(c(2009:2018))
+
+codo <- read.csv(paste0(basdir, "/st_class/partner_list.csv"), stringsAsFactors = F)
+
+#using 699 for India.
+codo1 <- c(699) 
+names(codo)
+
+library(dplyr)
+library(tidyverse)
+codo2 <- codo %>%
+  filter(country.code %in% codo1)
+#creating all the folder of countries and the export and import folders in a single go.
+setwd("D:/R5b/comtrade4/cmtr_dnld")
+
+for (i in codo1){
+  subdir <- as.name(codo2$country.name[codo2$country.code == i])
+  ifelse(!dir.exists(file.path(getwd(), subdir)),
+         dir.create(file.path(getwd(), subdir)), FALSE)
+  ifelse(!dir.exists(paste0(file.path(getwd(), subdir), "/export")), 
+         dir.create(paste0(file.path(getwd(), subdir), "/export")), FALSE)
+  ifelse(!dir.exists(paste0(file.path(getwd(), subdir), "/import")),
+         dir.create(paste0(file.path(getwd(), subdir), "/import")), FALSE)
+}
+```
+
+Using the Comtrade function
+---------------------------
+
+``` r
+##########################################
+#for export.
+
+for (j in codo1){
+  cn2 = 0
+  for (i in year){
+    cn1 = 0
+    for (k in qq){
+      s2 <- get.Comtrade(r=j, rg = "2", cc=k, p="all", ps = i, fmt="csv")
+      if (cn1 == 0){
+        write.table(s2$data, paste0(getwd(), "/", codo2$country.name[codo2$country.code == j], "/export/", i, ".csv"), 
+                    append = T, row.names = F, col.names = T, sep = ",")
+      }
+      else {
+        write.table(s2$data, paste0(getwd(), "/", codo2$country.name[codo2$country.code == j], "/export/", i, ".csv"), 
+                    append = T, row.names = F, col.names = F, sep = ",")
+      }
+      cn1 = cn1 + 1
+    }
+    cn2 = cn2 + 1
+    if (cn2 == 3) {
+      Sys.sleep(3) # delay of 1 minute after every 3 years data to avoid connection errors.
+    }
+  }
+}
+
+#-------------------------------
+#for import.
+
+for (j in codo1){
+  cn2 = 0
+  for (i in year){
+    cn1 = 0
+    for (k in qq){
+      s2 <- get.Comtrade(r=j, rg = "1", cc=k, p="all", ps = i, fmt="csv")
+      if (cn1 == 0){
+        write.table(s2$data, paste0(getwd(), "/", codo2$country.name[codo2$country.code == j], "/import/", i, ".csv"), 
+                    append = T, row.names = F, col.names = T, sep = ",")
+      }
+      else {
+        write.table(s2$data, paste0(getwd(), "/", codo2$country.name[codo2$country.code == j], "/import/", i, ".csv"), 
+                    append = T, row.names = F, col.names = F, sep = ",")
+      }
+      cn1 = cn1 + 1
+    }
+    cn2 = cn2 + 1
+    if (cn2 == 3) {
+      Sys.sleep(3) # delay of 1 minute after every 3 years data to avoid connection errors.
+    }
+  }
+}
+```
