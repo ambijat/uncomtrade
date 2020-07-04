@@ -184,21 +184,37 @@ get.Comtrade <- function(url="http://comtrade.un.org/api/get?"
 Creating the Country folder for storage
 ---------------------------------------
 
+The CSV files for each year would be downloaded for a period from 2009
+to 2018, i.e., 10 files for 10 years. The partner\_list file is loaded
+for getting the code of the reported country, which in this case is
+India. India’s code is 699.
+
 ``` r
 year <- as.character(c(2009:2018))
 
-codo <- read.csv(paste0(basdir, "/st_class/partner_list.csv"), stringsAsFactors = F)
+codo <- read.csv("D:/Git/UNComtrade/partner_list.csv", stringsAsFactors = F)
 
 #using 699 for India.
 codo1 <- c(699) 
 names(codo)
+```
 
+Intializing the libraries
+
+``` r
 library(dplyr)
 library(tidyverse)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 4.0.2
+
+We will use it as a variable to create first folder with the name India
+and in it there will be 2 separate folders will be created for export
+and import.
+
+``` r
 codo2 <- codo %>%
   filter(country.code %in% codo1)
-#creating all the folder of countries and the export and import folders in a single go.
-setwd("D:/R5b/comtrade4/cmtr_dnld")
 
 for (i in codo1){
   subdir <- as.name(codo2$country.name[codo2$country.code == i])
@@ -214,8 +230,22 @@ for (i in codo1){
 Using the Comtrade function
 ---------------------------
 
+Now we are ready to run the function for downloading the data as CSV
+files. For each individual year the files will be downloaded in the
+country folder and the sub-folder as the case may be of import and
+export.
+
+An if-else command is used below which has a specific use. As the query
+is being made for the 3 strings (if you remember we created in variable
+qq). The iteration for each string shall give headers for columns and we
+do not want headers for each time data is appended except the first
+time. So, we solve that puzzle by using if-else command.
+
+Once again to harmonize with the query limitation we use a time lapse of
+1 minute within te loop after each country. Since here it is only 1
+reporter country India its effect wont be noticed.
+
 ``` r
-##########################################
 #for export.
 
 for (j in codo1){
@@ -240,8 +270,13 @@ for (j in codo1){
     }
   }
 }
+```
 
-#-------------------------------
+The query for export and import are 2 separate functions. Hence, once
+the first query is run then the second query of import shall be run to
+download the import data in respective folders.
+
+``` r
 #for import.
 
 for (j in codo1){
@@ -267,3 +302,9 @@ for (j in codo1){
   }
 }
 ```
+
+After successfully running this code the structure of raw data shall
+emerge as shown here
+[India](https://github.com/ambijat/uncomtrade/tree/master/India_iron_raw).
+The github names have been modified only to indicate the folder of raw
+data and the processed data.
