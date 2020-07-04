@@ -47,13 +47,15 @@ rr
     ## [13] 73731 77584
 
 Now as to impute the above 3 strings into query we need to put comma
-sing \[,\] in between those queries. This is not done by actually
+sign \[,\] in between those queries. This is not done by actually
 putting the sign, instead a string \[“%2C%20”\] is used to insert the
-comma sign in between each code.
+comma sign in between the two codes.
 
-This is done as follows. \* First by creating empty list qq. \*
-Iterating the string \[“%2C%20”\] for each string in rr. \* Finally
-appending the results into qq.
+This is done as follows.
+
+-   First by creating empty list qq.
+-   Iterating the string \[“%2C%20”\] for each string in rr.
+-   Finally appending the results into qq.
 
 ``` r
 qq <- list()
