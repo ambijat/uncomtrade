@@ -106,6 +106,8 @@ I you go through the parameters required for the function then their
 explanation is as follows.
 
 -   url - it is the link to the API.
+-   maxrec - for a guest user 100000 is the maximum limit, we are using
+    the same.
 -   type - here “C” is for commodities
 -   freq - here “A” is for annual
 -   px - for classification type, we are using “S4” here.
