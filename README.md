@@ -71,5 +71,7 @@ Data dressing refers to make the data readymade for secondary level applications
 The dressed up data still is in compact form. It needs to be spread into panel form with countries as variables and commodities as observation. The same is being done here. Below a sample of raw data and the processed data is presented.
 
 ## Sample Data
-[Raw data]{}
+The data file shown below is of single year 2009. The complete sets are already in the folders of the repository.
+
+[Raw data]()
 [Processed data]()
