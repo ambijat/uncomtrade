@@ -67,3 +67,9 @@ Once having downloaded the raw data can be seen [here](https://github.com/ambija
 Data dressing refers to make the data readymade for secondary level applications that can directly use it without having to bother about its rows and columns. This panel formation is useful for many econometric and statistical analysis that allows us to measure various relations between variables. However, one of the most presentable forms of data is the data visualisation. It makes inferences quick and visibly simple. Such visualisation techniques can be neatly deployed in R with the dressed up data such as one prepared here. Once it is converted into uniform matrix across the yearwise files then a final step is needed before utilising the data for study.
 
 [Data Transpose](https://github.com/ambijat/uncomtrade/blob/master/tpos_s4ag5.md)
+
+The dressed up data still is in compact form. It needs to be spread into panel form with countries as variables and commodities as observation. The same is being done here. Below a sample of raw data and the processed data is presented.
+
+## Sample Data
+[Raw data]{}
+[Processed data]()
