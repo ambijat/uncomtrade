@@ -71,7 +71,7 @@ Data dressing refers to make the data readymade for secondary level applications
 The dressed up data still is in compact form. It needs to be spread into panel form with countries as variables and commodities as observation. The same is being done here. Below a sample of raw data and the processed data is presented.
 
 ## Sample Data
-The data file shown below is of single year 2009. The complete sets are already in the folders of the repository. You need to use horizontal scroll bar to examine the entire splay of the data.
+The data file shown below is of single year exports for 2009. The complete sets are already in the folders of the repository. You need to use horizontal scroll bar to examine the entire splay of the data. The raw data size was more than 700 kb, whereas the processed data size is nearly 34 kb.
 
 [Raw data](https://github.com/ambijat/uncomtrade/blob/master/India_iron_raw/export/2009.csv)
 
