@@ -27,7 +27,7 @@ The scripts coded here in R programming language are aimed at harmonizing the ne
     + S3 - Revision 3
     + S4 - Revision 4    
 
-## Levels of Classification
+## Aggregate Levels of Classification
 * TOTAL
 * Levels
   + AG1 - 01 digits code
