@@ -29,7 +29,7 @@ The scripts coded here in R programming language are aimed at harmonizing the ne
 
 ## Aggregate Levels of Classification
 * TOTAL
-* Levels
+* Aggregate Levels
   + AG1 - 01 digits code
   + AG2 - 02 digits code
   + AG3 - 03 digits code
