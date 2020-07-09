@@ -21,6 +21,7 @@ The scripts coded here in R programming language are aimed at harmonizing the ne
     + H2 - 2002
     + H3 - 2007
     + H4 - 2012
+    + H5 - 2017
 * ST - Standard International Trade Classification (SITC)
     + S1 - Revision 1
     + S2 - Revision 2
