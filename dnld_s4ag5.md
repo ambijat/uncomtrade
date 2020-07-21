@@ -128,6 +128,7 @@ explanation is as follows.
     in csv format.
 
 ``` r
+options(scipen=999)
 get.Comtrade <- function(url="http://comtrade.un.org/api/get?"
                          ,maxrec=100000
                          ,type="C"
